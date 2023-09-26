@@ -5,7 +5,6 @@ import 'package:mvvm_architecture/modules/home/view_model/home_provider.dart';
 class HomeView extends ConsumerWidget {
    HomeView({super.key});
 
-
   TextEditingController txtC = TextEditingController();
 
   @override
@@ -43,7 +42,8 @@ class HomeView extends ConsumerWidget {
 
           Consumer(builder: (c,r,ch){
             List<String>? data = r.watch(homeProvider.notifier).state.allName;
-            return Text(data.toString());
+
+            return Text("${data.toString()}");
           })
 
         ],

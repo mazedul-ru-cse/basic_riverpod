@@ -8,7 +8,6 @@ class HomeNotifier extends StateNotifier<HomeState> {
   void add(String newName){
     state = state.addName(newName: newName);
   }
-
   void delete(){
     state = state.deleteName();
   }
